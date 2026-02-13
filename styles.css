@@ -79,6 +79,29 @@ a:hover { text-decoration: underline; }
   background: #eef2f7;
 }
 
+.ethics__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.ethics__item {
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.ethics__item strong {
+  color: var(--navy);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
 .section-label {
   display: inline-block;
   font-size: 0.75rem;
@@ -795,6 +818,16 @@ a:hover { text-decoration: underline; }
   color: #8899af;
   margin-top: 0.5rem;
   line-height: 1.4;
+}
+
+.stat-block__source {
+  font-size: 0.75rem;
+  color: #5a6a80;
+  margin-top: 0.5rem;
+}
+
+.section--dark .stat-block__source {
+  color: #6b7b90;
 }
 
 /* ============================================
