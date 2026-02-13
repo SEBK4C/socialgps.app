@@ -3,78 +3,463 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SocialGPS</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>Social GPS — Navigate every conversation with clarity</title>
+  <meta name="description" content="Social GPS analyses your conversations and shows you exactly how you came across — with coaching grounded in Gottman, Ekman, and six domains of communication science. Navigate every conversation with clarity.">
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #e2e8f0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Social GPS — Navigate every conversation with clarity">
+  <meta property="og:description" content="The conversational emotional intelligence platform that shows you how people experience you. Upload any conversation. Receive your Emotional Receipt.">
+  <meta property="og:url" content="https://socialgps.app">
+  <meta property="og:site_name" content="Social GPS">
 
-    .container {
-      text-align: center;
-      max-width: 600px;
-      padding: 2rem;
-    }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Social GPS — Navigate every conversation with clarity">
+  <meta name="twitter:description" content="The conversational emotional intelligence platform that shows you how people experience you. Upload any conversation. Receive your Emotional Receipt.">
 
-    .logo {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    p {
-      font-size: 1.125rem;
-      line-height: 1.75;
-      color: #94a3b8;
-      margin-bottom: 2rem;
-    }
-
-    .status {
-      display: inline-block;
-      padding: 0.5rem 1.25rem;
-      border-radius: 9999px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: #38bdf8;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 1.5rem;
-      color: #475569;
-      font-size: 0.8rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="logo">&#x1F4CD;</div>
-    <h1>SocialGPS</h1>
-    <p>Your social navigation companion. We're building something great — stay tuned.</p>
-    <span class="status">Coming Soon</span>
-  </div>
-  <footer>&copy; 2026 SocialGPS</footer>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Social<span>GPS</span></a>
+      <ul class="nav__links">
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#use-cases">Use cases</a></li>
+        <li><a href="#science">The science</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#waitlist" class="nav__cta">Join the waitlist</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== 1. HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="container">
+      <p class="hero__tagline">Navigate every conversation with clarity</p>
+      <h1 class="hero__title">You have no idea how you come across. We fix that.</h1>
+      <p class="hero__subtitle">Social GPS is a conversational emotional intelligence platform that analyses your conversations and shows you exactly how you came across — so you can communicate better in every part of your life.</p>
+      <div class="hero__actions">
+        <a href="#waitlist" class="btn btn--primary">Join the waitlist</a>
+        <a href="#how-it-works" class="btn btn--outline">See how it works</a>
+      </div>
+      <div class="hero__proof">
+        <div class="hero__proof-item">
+          <div class="hero__proof-number">6</div>
+          <div class="hero__proof-label">Research domains</div>
+        </div>
+        <div class="hero__proof-item">
+          <div class="hero__proof-number">40+</div>
+          <div class="hero__proof-label">Years of research</div>
+        </div>
+        <div class="hero__proof-item">
+          <div class="hero__proof-number">93%</div>
+          <div class="hero__proof-label">Of communication is nonverbal</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== 2. THE PROBLEM ===================== -->
+  <section class="section" id="problem">
+    <div class="container">
+      <span class="section-label">The problem</span>
+      <h2 class="section-title">Most people have no idea how they come across</h2>
+      <p class="section-subtitle">The data is clear — and the cost is enormous.</p>
+      <div class="problem__grid">
+        <div class="problem__card">
+          <div class="problem__stat">$37B</div>
+          <div class="problem__stat-label">Annual cost of subpar meetings to companies</div>
+          <div class="problem__source">Owl Labs</div>
+        </div>
+        <div class="problem__card">
+          <div class="problem__stat">58%</div>
+          <div class="problem__stat-label">Of job performance is predicted by emotional intelligence</div>
+          <div class="problem__source">TalentSmart</div>
+        </div>
+        <div class="problem__card">
+          <div class="problem__stat">36%</div>
+          <div class="problem__stat-label">Of the global population demonstrates emotional intelligence</div>
+          <div class="problem__source">TalentSmart</div>
+        </div>
+        <div class="problem__card">
+          <div class="problem__stat">34x</div>
+          <div class="problem__stat-label">Face-to-face requests are more successful than emails</div>
+          <div class="problem__source">MIT Sloan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. THE SOLUTION — EMOTIONAL RECEIPT ===================== -->
+  <section class="receipt" id="solution">
+    <div class="container">
+      <div class="receipt__layout">
+        <div class="receipt__text">
+          <span class="section-label">The solution</span>
+          <h2 class="section-title">Your conversation, decoded</h2>
+          <p class="section-subtitle">Every conversation leaves an emotional fingerprint. The Emotional Receipt makes it visible — a visual map of the emotional dynamics, destructive patterns, and actionable coaching grounded in six domains of communication science.</p>
+          <ul class="receipt__features">
+            <li>
+              <span class="receipt__check">&#10003;</span>
+              <span><strong>Emotion map visualisation</strong> — the emotional landscape of your conversation rendered using the Atlas of Emotions colour palette</span>
+            </li>
+            <li>
+              <span class="receipt__check">&#10003;</span>
+              <span><strong>Emotional timeline</strong> — see how the conversation's emotional temperature shifted moment by moment</span>
+            </li>
+            <li>
+              <span class="receipt__check">&#10003;</span>
+              <span><strong>Self-reflection summary</strong> — focused exclusively on your own behaviour, never the other person's</span>
+            </li>
+            <li>
+              <span class="receipt__check">&#10003;</span>
+              <span><strong>NVC mirror</strong> — your conversation restated in observation-feeling-need-request format</span>
+            </li>
+            <li>
+              <span class="receipt__check">&#10003;</span>
+              <span><strong>Actionable suggestions</strong> — repair attempts, calibrated questions, and reframing options</span>
+            </li>
+            <li>
+              <span class="receipt__check">&#10003;</span>
+              <span><strong>Destructive pattern alert</strong> — flagged Four Horsemen behaviours with severity and repair suggestions</span>
+            </li>
+          </ul>
+        </div>
+        <div class="receipt__visual">
+          <div class="receipt-card">
+            <div class="receipt-card__header">
+              <span class="receipt-card__title">Emotional Receipt</span>
+              <span class="receipt-card__date">13 Feb 2026</span>
+            </div>
+            <div class="emotion-flower" aria-hidden="true">
+              <div class="emotion-petal emotion-petal--anger"></div>
+              <div class="emotion-petal emotion-petal--fear"></div>
+              <div class="emotion-petal emotion-petal--sadness"></div>
+              <div class="emotion-petal emotion-petal--disgust"></div>
+              <div class="emotion-petal emotion-petal--enjoyment"></div>
+            </div>
+            <div class="receipt-card__timeline"></div>
+            <div class="receipt-card__timeline-label">
+              <span>0:00</span>
+              <span>Emotional timeline</span>
+              <span>32:15</span>
+            </div>
+            <div class="receipt-card__insights">
+              <div class="insight-pill">
+                <span class="insight-pill__dot" style="background: var(--enjoyment)"></span>
+                Dominant emotion: enjoyment (42%)
+              </div>
+              <div class="insight-pill">
+                <span class="insight-pill__dot" style="background: var(--anger)"></span>
+                Defensiveness detected at 12:30–14:10
+              </div>
+              <div class="insight-pill">
+                <span class="insight-pill__dot" style="background: var(--disgust)"></span>
+                Repair attempt successful at 18:45
+              </div>
+              <div class="insight-pill">
+                <span class="insight-pill__dot" style="background: var(--accent)"></span>
+                3 calibrated question opportunities
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. HOW IT WORKS ===================== -->
+  <section class="section" id="how-it-works">
+    <div class="container text-center">
+      <span class="section-label">How it works</span>
+      <h2 class="section-title mx-auto">Three steps to clarity</h2>
+      <p class="section-subtitle mx-auto">No setup, no integrations, no AI role-play. Just your real conversations, decoded.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3 class="step__title">Upload</h3>
+          <p class="step__desc">Record any conversation — a work meeting, a podcast, a tough talk with your partner — and upload the audio.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3 class="step__title">Analyse</h3>
+          <p class="step__desc">Social GPS combines speech emotion recognition, NLP, and six domains of communication psychology to decode your conversation.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3 class="step__title">Receive your Emotional Receipt</h3>
+          <p class="step__desc">Get a visual map of the emotional dynamics, your communication patterns, and actionable coaching — instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. KEY FEATURES ===================== -->
+  <section class="section section--alt" id="features">
+    <div class="container">
+      <span class="section-label">Features</span>
+      <h2 class="section-title">Everything your communication coach would tell you — after every conversation</h2>
+      <p class="section-subtitle">The equivalent of a professional psychologist sitting in on every conversation — for a fraction of the cost.</p>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background: rgba(253,216,53,0.12); color: var(--enjoyment);">&#127793;</div>
+          <h3 class="feature-card__title">The Emotional Receipt</h3>
+          <p class="feature-card__desc">A visual, shareable artifact that maps the emotional landscape of any conversation. The debrief your therapist would give you — instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background: rgba(46,117,182,0.12); color: var(--accent);">&#128300;</div>
+          <h3 class="feature-card__title">Six coaching lenses</h3>
+          <p class="feature-card__desc">Every insight traces back to published research: Gottman, Ekman, Rosenberg, Cialdini, Voss, and computational paralinguistics. Psychology-grounded, not black-box.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background: rgba(67,160,71,0.12); color: var(--disgust);">&#128200;</div>
+          <h3 class="feature-card__title">Longitudinal tracking</h3>
+          <p class="feature-card__desc">See your communication patterns evolve over weeks and months. Like a Fitbit for emotional intelligence — measurable growth, not guesswork.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background: rgba(142,36,170,0.12); color: var(--fear);">&#128161;</div>
+          <h3 class="feature-card__title">Destructive pattern detection</h3>
+          <p class="feature-card__desc">John Gottman can predict divorce with 93% accuracy by detecting four destructive communication patterns. We detect them in any conversation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background: rgba(229,57,53,0.12); color: var(--anger);">&#128483;</div>
+          <h3 class="feature-card__title">Vocal power assessment</h3>
+          <p class="feature-card__desc">Pace, pause, pitch, and volume scoring based on Nick Morgan's research on how vocal delivery shapes perception and credibility.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background: rgba(30,136,229,0.12); color: var(--sadness);">&#129309;</div>
+          <h3 class="feature-card__title">Self-focused by design</h3>
+          <p class="feature-card__desc">We analyse what you could do better, never what the other person did wrong. This is an ethical design choice, not a limitation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. USE CASES ===================== -->
+  <section class="section section--dark" id="use-cases">
+    <div class="container">
+      <span class="section-label">Use cases</span>
+      <h2 class="section-title">Works across your whole life</h2>
+      <p class="section-subtitle">The same platform analyses a work meeting, a podcast interview, a political speech, and a conversation with your partner.</p>
+      <div class="use-cases__grid">
+        <div class="use-case">
+          <div class="use-case__icon">&#128149;</div>
+          <h3 class="use-case__title">Individuals</h3>
+          <p class="use-case__pain">"I keep having the same arguments. I don't know why people react that way to me."</p>
+          <p class="use-case__solution">Your pocket psychologist. See your own patterns, understand yourself before trying to fix others.</p>
+        </div>
+        <div class="use-case">
+          <div class="use-case__icon">&#128188;</div>
+          <h3 class="use-case__title">Leaders &amp; managers</h3>
+          <p class="use-case__pain">"Difficult conversations go sideways. Executive coaching is $500/hour."</p>
+          <p class="use-case__solution">Communication coaching for every manager, not just the C-suite. Cialdini + Gottman + Voss — in your pocket.</p>
+        </div>
+        <div class="use-case">
+          <div class="use-case__icon">&#127908;</div>
+          <h3 class="use-case__title">Podcasters &amp; creators</h3>
+          <p class="use-case__pain">"I don't know if my interview style is working. Listener retention drops but I don't know where."</p>
+          <p class="use-case__solution">Know exactly how your audience experiences you. Brand voice consistency, measured.</p>
+        </div>
+        <div class="use-case">
+          <div class="use-case__icon">&#127963;</div>
+          <h3 class="use-case__title">Political professionals</h3>
+          <p class="use-case__pain">"My client went off-message in that interview. There's no tech tool for political communication coaching."</p>
+          <p class="use-case__solution">The only communication analytics tool built for political professionals. Lakoff framing + Morgan vocal power + Gottman trust patterns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 7. THE SCIENCE ===================== -->
+  <section class="section" id="science">
+    <div class="container">
+      <span class="section-label">The science</span>
+      <h2 class="section-title">Grounded in six domains of communication research</h2>
+      <p class="section-subtitle">Every insight traces back to published, peer-reviewed research. We don't just detect emotions — we interpret them through validated frameworks.</p>
+      <div class="frameworks__grid">
+        <div class="framework">
+          <div class="framework__icon" style="background: var(--anger);">E</div>
+          <div>
+            <div class="framework__name">Atlas of Emotions (Ekman)</div>
+            <div class="framework__desc">Developed by Dr. Paul Ekman and commissioned by the Dalai Lama — the most comprehensive map of human emotions ever created.</div>
+          </div>
+        </div>
+        <div class="framework">
+          <div class="framework__icon" style="background: var(--fear);">G</div>
+          <div>
+            <div class="framework__name">Four Horsemen (Gottman)</div>
+            <div class="framework__desc">John Gottman can predict divorce with 93% accuracy by detecting four destructive communication patterns. We detect them in any conversation.</div>
+          </div>
+        </div>
+        <div class="framework">
+          <div class="framework__icon" style="background: var(--disgust);">R</div>
+          <div>
+            <div class="framework__name">Nonviolent Communication (Rosenberg)</div>
+            <div class="framework__desc">Marshall Rosenberg's framework for honest, empathic communication — used by UN mediators and couples therapists worldwide.</div>
+          </div>
+        </div>
+        <div class="framework">
+          <div class="framework__icon" style="background: var(--accent);">C</div>
+          <div>
+            <div class="framework__name">Persuasion principles (Cialdini)</div>
+            <div class="framework__desc">Robert Cialdini's seven principles of influence — the most cited persuasion research in history.</div>
+          </div>
+        </div>
+        <div class="framework">
+          <div class="framework__icon" style="background: var(--enjoyment); color: var(--navy);">V</div>
+          <div>
+            <div class="framework__name">Tactical empathy (Voss)</div>
+            <div class="framework__desc">Chris Voss negotiated hostage situations for the FBI. His framework teaches anyone to navigate high-stakes conversations.</div>
+          </div>
+        </div>
+        <div class="framework">
+          <div class="framework__icon" style="background: var(--sadness);">S</div>
+          <div>
+            <div class="framework__name">Computational paralinguistics (Schuller)</div>
+            <div class="framework__desc">The science of extracting meaning from how something is said — tone, pitch, rhythm, pauses — independent of the words themselves.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 8. SOCIAL PROOF / MARKET STATS ===================== -->
+  <section class="section section--dark" id="proof">
+    <div class="container text-center">
+      <span class="section-label">The opportunity</span>
+      <h2 class="section-title">The world is waking up to emotional intelligence</h2>
+      <p class="section-subtitle mx-auto">Demand for communication skills is surging — and the technology to measure them has finally arrived.</p>
+      <div class="stats__grid">
+        <div class="stat-block">
+          <div class="stat-block__number">92%</div>
+          <div class="stat-block__label">Of hiring managers value soft skills equally or above technical expertise</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-block__number">26%</div>
+          <div class="stat-block__label">Projected increase in demand for emotional skills by 2030</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-block__number">$4.50</div>
+          <div class="stat-block__label">Returned for every $1 invested in soft skills training</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-block__number">81%</div>
+          <div class="stat-block__label">LLM score on EQ tests vs. 56% human average</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 9. FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title mx-auto">Frequently asked questions</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">What is Social GPS?</div>
+          <div class="faq-item__a">Social GPS is a conversational emotional intelligence platform. You upload a recording of any conversation, and we produce an Emotional Receipt — a visual and textual debrief showing the emotional dynamics, destructive patterns, and actionable coaching insights from that interaction.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">How is this different from meeting transcription tools?</div>
+          <div class="faq-item__a">Transcription tools tell you what was said. We tell you how it felt — the emotional undercurrents, the trust dynamics, the missed opportunities for connection. The words are only half the story.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">What kind of conversations can I analyse?</div>
+          <div class="faq-item__a">Any audio recording between one and eight speakers, up to 120 minutes. Work meetings, podcast interviews, political speeches, personal conversations — if you can record it (with consent), we can analyse it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">Is this therapy?</div>
+          <div class="faq-item__a">No. Social GPS is an educational self-improvement tool, not a clinical instrument. We provide communication coaching grounded in published research, not psychological diagnosis or treatment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">What about privacy?</div>
+          <div class="faq-item__a">You must have consent from all parties before uploading a recording. We display consent reminders before every upload. Your data is yours — you control it, and you can delete it anytime.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">Why does it only focus on my behaviour?</div>
+          <div class="faq-item__a">By design. Research shows that the most effective path to better communication starts with self-awareness, not partner blame. This also prevents the tool from being used as surveillance or as a weapon in arguments.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">What frameworks does Social GPS use?</div>
+          <div class="faq-item__a">We integrate six research domains: Ekman's Atlas of Emotions, Gottman's Four Horsemen, Rosenberg's Nonviolent Communication, Cialdini's persuasion principles, Voss's tactical empathy, and computational paralinguistics (Schuller). Every insight traces back to published, peer-reviewed research.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q" role="button" tabindex="0">How much does it cost?</div>
+          <div class="faq-item__a">We're currently in early access. Join the waitlist for priority access and founding member pricing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 10. CTA ===================== -->
+  <section class="cta-banner" id="waitlist">
+    <div class="container">
+      <span class="section-label">Early access</span>
+      <h2 class="section-title">See how you're really coming across</h2>
+      <p class="section-subtitle mx-auto">Join the waitlist for early access to Social GPS and founding member pricing.</p>
+      <a href="mailto:hello@socialgps.app?subject=Waitlist%20request" class="btn btn--primary">Join the waitlist</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>&copy; 2026 Social GPS. All rights reserved.</div>
+      <ul class="footer__links">
+        <li><a href="#top">Back to top</a></li>
+        <li><a href="mailto:hello@socialgps.app">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item__q').forEach(function(q) {
+      q.addEventListener('click', function() {
+        this.parentElement.classList.toggle('open');
+      });
+      q.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.parentElement.classList.toggle('open');
+        }
+      });
+    });
+
+    // Mobile nav toggle
+    var toggle = document.querySelector('.nav__toggle');
+    var links = document.querySelector('.nav__links');
+    if (toggle) {
+      toggle.addEventListener('click', function() {
+        var visible = links.style.display === 'flex';
+        links.style.display = visible ? 'none' : 'flex';
+        links.style.flexDirection = visible ? '' : 'column';
+        links.style.position = visible ? '' : 'absolute';
+        links.style.top = visible ? '' : '100%';
+        links.style.left = visible ? '' : '0';
+        links.style.right = visible ? '' : '0';
+        links.style.background = visible ? '' : 'rgba(27,42,74,0.98)';
+        links.style.padding = visible ? '' : '1rem 1.5rem';
+        links.style.gap = visible ? '' : '1rem';
+      });
+    }
+  </script>
 </body>
 </html>
